@@ -1,10 +1,7 @@
 # AutoScrollLoopViewPager
+=======================
 Android auto scroll viewpager or viewpager in viewpager
 
-Android Auto Scroll Loop View Pager
-=======================
-
-Combine from follow libraray to  [AutoScrollLoopViewPager.jar](https://github.com/neutra/AutoScrollLoopViewPager/raw/master/AutoScrollLoopViewPager.jar):
 
 - Trinea/[AutoScrollViewPager](https://github.com/Trinea/android-auto-scroll-view-pager)
 
