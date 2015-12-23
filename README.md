@@ -2,7 +2,6 @@
 =======================
 Android auto scroll viewpager or viewpager in viewpager
 
-
 - Trinea/[AutoScrollViewPager](https://github.com/Trinea/android-auto-scroll-view-pager)
 
 - ViewPager which can auto scroll, cycle.
