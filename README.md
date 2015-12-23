@@ -1,5 +1,5 @@
 # AutoScrollLoopViewPager
-=======================
+
 Android auto scroll viewpager or viewpager in viewpager
 
 - Trinea/[AutoScrollViewPager](https://github.com/Trinea/android-auto-scroll-view-pager)
@@ -25,7 +25,6 @@ at first, the index [-1, 0, 1] page will create * after fliping left 3 pages, th
 * real postion should be mapping realPosition = (count + position%count) % count, so index -1 will create the fourth page, and index 4 will create first page.
 
 
-
 ## Usage
 - include this library, use
 
@@ -37,13 +36,13 @@ at first, the index [-1, 0, 1] page will create * after fliping left 3 pages, th
 	android:layout_height="wrap_content" />
 ```
 replace
+
 ``` xml
 <android.support.v4.view.ViewPager
 	android:id="@+id/view_pager"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content" />
 ```
-
 
 - `startAutoScroll()` start auto scroll, delay time is `getInterval()`.
 - `startAutoScroll(int)` start auto scroll delayed.
@@ -55,7 +54,7 @@ replace
 - `setScrollDurationFactor(double)` set the factor by which the duration of sliding animation will change.
 - `setStopScrollWhenTouch(boolean)` set whether stop auto scroll when touching, default is true.
 - You may need [ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator) to implement indicator. 
-- Also you can see [CircleIndicator.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/app/src/main/java/com/autoscrollloopviewpager/widget/CircleIndicator.java) int this library
+- Also you can see [CircleIndicator.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/app/src/main/java/com/autoscrollloopviewpager/widget/CircleIndicator.java) in this library
 ```
 
 
@@ -72,17 +71,20 @@ copy this library to your project and use
         android:id="@+id/slideshowView"
         layout="@layout/my_banner" />
 </LinearLayout>
+
 ```
 
 And in Java Code
-`MyBanner myBanner = (MyBanner) findViewById(R.id.slideshowView);
+`
+MyBanner myBanner = (MyBanner) findViewById(R.id.slideshowView);
         ArrayList<Integer> l= new ArrayList<>();
         l.add(R.mipmap.a);
         l.add(R.mipmap.b);
         l.add(R.mipmap.c);
         l.add(R.mipmap.d);
         myBanner.setData(l);
-        myBanner.setDurtion(5.0f);`
+        myBanner.setDurtion(5.0f);
+        `
 
 ## License
 
