@@ -2,7 +2,7 @@
 
 Android auto scroll viewpager or viewpager in viewpager
 
-- Trinea/[AutoScrollViewPager](https://github.com/Trinea/android-auto-scroll-view-pager)
+1. Trinea/[AutoScrollViewPager](https://github.com/Trinea/android-auto-scroll-view-pager)
 
 - ViewPager which can auto scroll, cycle.
 
@@ -10,7 +10,7 @@ Android auto scroll viewpager or viewpager in viewpager
 
 ![android-auto-scroll-view-pager](http://farm3.staticflickr.com/2843/12805132475_e595664a81_o.gif)
 
-- yanzm/[LoopViewPager](https://github.com/yanzm/LoopViewPager)
+2. yanzm/[LoopViewPager](https://github.com/yanzm/LoopViewPager)
 
 An android ViewPager extension allowing infinite scrolling.
 
@@ -21,8 +21,7 @@ we can get the real position:
 The only thing you need to know that the position is not real position.
 
 For example, is the data size if 4, and the page limit is 1, and the four pa . * 
-at first, the index [-1, 0, 1] page will create * after fliping left 3 pages, the index [2, 3, 4] page will create. 
-* real postion should be mapping realPosition = (count + position%count) % count, so index -1 will create the fourth page, and index 4 will create first page.
+at first, the index [-1, 0, 1] page will create * after fliping left 3 pages, the index [2, 3, 4] page will create. * real postion should be mapping `realPosition = (count + position%count) % count`, so index -1 will create the fourth page, and index 4 will create first page.
 
 
 ## Usage
@@ -55,7 +54,6 @@ replace
 - `setStopScrollWhenTouch(boolean)` set whether stop auto scroll when touching, default is true.
 - You may need [ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator) to implement indicator. 
 - Also you can see [CircleIndicator.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/app/src/main/java/com/autoscrollloopviewpager/widget/CircleIndicator.java) in this library
-```
 
 
 ## Simple use
@@ -71,7 +69,6 @@ copy this library to your project and use
         android:id="@+id/slideshowView"
         layout="@layout/my_banner" />
 </LinearLayout>
-
 ```
 
 And in Java Code
