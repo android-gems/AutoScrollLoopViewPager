@@ -72,16 +72,19 @@ copy this library to your project and use
 ```
 
 And in Java Code
-`
+
+
+``` java
 MyBanner myBanner = (MyBanner) findViewById(R.id.slideshowView);
-        ArrayList<Integer> l= new ArrayList<>();
-        l.add(R.mipmap.a);
-        l.add(R.mipmap.b);
-        l.add(R.mipmap.c);
-        l.add(R.mipmap.d);
-        myBanner.setData(l);
-        myBanner.setDurtion(5.0f);
-        `
+   ArrayList<Integer> l= new ArrayList<>();
+   l.add(R.mipmap.a);
+   l.add(R.mipmap.b);
+   l.add(R.mipmap.c);
+   l.add(R.mipmap.d);
+   myBanner.setData(l);
+   myBanner.setDurtion(5.0f);
+```
+
 
 ## License
 
