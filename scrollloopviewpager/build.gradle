@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+// 提交到仓库中的版本号
+version = "1.0.0"
 
 android {
     compileSdkVersion 22
@@ -23,3 +27,93 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.2.0'
 }
+
+group = "com.bobomee.android"
+def siteUrl = 'https://github.com/BoBoMEe/AutoScrollLoopViewPager'                    // #CONFIG# // project homepage
+def gitUrl  = 'https://github.com/BoBoMEe/AutoScrollLoopViewPager.git'                 // #CONFIG# // project git url
+def issueUrl = 'https://github.com/BoBoMEe/AutoScrollLoopViewPager/issues'            // #CONFIG# // project issue url
+group = "com.bobomee.android"                                           // #CONFIG# // Maven Group ID for the artifact (pageckage name is ok)
+
+
+//generate javadoc and jar
+
+install {
+    repositories.mavenInstaller {
+        // generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                name 'AutoScrollLoopViewPager'                             // #CONFIG# // project title
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'BoBoMEe'                                  // #CONFIG# // your user id (you can write your nickname)
+                        name 'bobomee'                                       // #CONFIG# // your user name
+                        email '673840339@qq.com'                      // #CONFIG# // your email
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+task writeNewPom << {
+    pom.writeTo("$buildDir/1.0.0.pom.xml")
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+
+//bintray upload
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "AutoScrollLoopViewPager"                                                   // #CONFIG# project name in jcenter
+        desc = 'A helpful library for Android named AutoScrollLoopViewPager.'
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        issueTrackerUrl = issueUrl
+        licenses = ["Apache-2.0"]
+        labels = ['android']
+        publish = true
+        publicDownloadNumbers = true
+    }
+}
+
+

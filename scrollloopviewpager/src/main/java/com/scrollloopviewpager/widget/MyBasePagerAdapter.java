@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 /**
  * MyBasePagerAdapter
+ * @author BoBoMEe
  */
 public class  MyBasePagerAdapter<T> extends PagerAdapter {
     public T[] objects;

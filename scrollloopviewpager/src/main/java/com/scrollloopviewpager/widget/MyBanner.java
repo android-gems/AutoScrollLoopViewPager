@@ -13,9 +13,12 @@ import com.autoscrollloopviewpager.scrollloopviewpager.R;
 
 import java.util.ArrayList;
 
-/**
- * 自定义轮播图
+/***
+ * banner
+ *
+ * @author BoBoMEe
  */
+
 public class MyBanner extends RelativeLayout{
 
     // 自动轮播的时间间隔

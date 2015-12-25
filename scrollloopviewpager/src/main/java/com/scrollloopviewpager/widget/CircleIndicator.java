@@ -9,6 +9,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
+/***
+ * indicator for scroll
+ *
+ * @author BoBoMEe
+ */
+
 public class CircleIndicator extends View implements ViewPager.OnPageChangeListener, LoopViewPager.OnPageChangeListener {
 
     private int mCount;
