@@ -58,7 +58,22 @@ replace
 
 ## Simple use
 
-copy this library to your project and use 
+- `maven`
+``` xml
+<dependency>
+<groupId>com.bobomee.android</groupId>
+<artifactId>scrollloopviewpager</artifactId>
+<version>1.0.0</version>
+<type>aar</type>
+</dependency>
+```
+
+- `gradle`
+``` java
+compile(group: 'com.bobomee.android', name: 'scrollloopviewpager', version: '1.0.0', ext: 'aar')
+```
+
+layout 
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
