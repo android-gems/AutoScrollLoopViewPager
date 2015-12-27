@@ -73,7 +73,7 @@ replace
 compile(group: 'com.bobomee.android', name: 'scrollloopviewpager', version: '1.0.0', ext: 'aar')
 ```
 
-layout 
+Layout 
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
