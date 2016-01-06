@@ -1,1 +1,1 @@
-include ':scrollloopviewpager', ':myapplication'
+include ':scrollloopviewpager'
