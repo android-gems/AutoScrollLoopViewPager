@@ -100,6 +100,9 @@ MyBanner myBanner = (MyBanner) findViewById(R.id.slideshowView);
    myBanner.setDurtion(5.0f);
 ```
 
+See:
+[BannerViewActivity.java](https://github.com/BoBoMEe/BlogDemos/blob/master/app/src/main/java/com/bobomee/blogdemos/ui/activity/BannerViewActivity.java)
+
 
 ## License
 
