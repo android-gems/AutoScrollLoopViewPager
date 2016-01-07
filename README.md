@@ -58,7 +58,7 @@ replace
 - You may need [ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator) to implement indicator. 
 - Also you can see [CircleIndicator.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/scrollloopviewpager/src/main/java/com/scrollloopviewpager/widget/CircleIndicator.java) in this library
 
-## Simple use
+## Simple Usage
 
 - `maven`
 
