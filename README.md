@@ -25,6 +25,7 @@ at first, the index [-1, 0, 1] page will create * after fliping left 3 pages, th
 
 
 ## Usage
+
 - include this library, use
 
 
@@ -34,6 +35,7 @@ at first, the index [-1, 0, 1] page will create * after fliping left 3 pages, th
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content" />
 ```
+
 replace
 
 ``` xml
@@ -48,17 +50,18 @@ replace
 - `stopAutoScroll()` stop auto scroll.
 
 ## Setting
+
 - `setInterval(long)` set auto scroll time in milliseconds, default is `DEFAULT_INTERVAL`.
 - `setDirection(int)` set auto scroll direction, default is `RIGHT`.
 - `setScrollDurationFactor(double)` set the factor by which the duration of sliding animation will change.
 - `setStopScrollWhenTouch(boolean)` set whether stop auto scroll when touching, default is true.
 - You may need [ViewPagerIndicator](https://github.com/JakeWharton/Android-ViewPagerIndicator) to implement indicator. 
-- Also you can see [CircleIndicator.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/app/src/main/java/com/autoscrollloopviewpager/widget/CircleIndicator.java) in this library
-
+- Also you can see [CircleIndicator.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/scrollloopviewpager/src/main/java/com/scrollloopviewpager/widget/CircleIndicator.java) in this library
 
 ## Simple use
 
 - `maven`
+
 ``` xml
 <dependency>
 <groupId>com.bobomee.android</groupId>
@@ -69,6 +72,7 @@ replace
 ```
 
 - `gradle`
+
 ``` java
 compile(group: 'com.bobomee.android', name: 'scrollloopviewpager', version: '1.0.0', ext: 'aar')
 ```
