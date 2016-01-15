@@ -74,7 +74,7 @@ replace
 - `gradle`
 
 ``` java
-compile(group: 'com.bobomee.android', name: 'scrollloopviewpager', version: '1.0.0', ext: 'aar')
+compile 'com.bobomee.android:scrollloopviewpager:1.0.0@aar'
 ```
 
 Layout 
