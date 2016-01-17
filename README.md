@@ -66,7 +66,7 @@ replace
 <dependency>
 <groupId>com.bobomee.android</groupId>
 <artifactId>scrollloopviewpager</artifactId>
-<version>1.0.0</version>
+<version>1.1</version>
 <type>aar</type>
 </dependency>
 ```
@@ -74,7 +74,7 @@ replace
 - `gradle`
 
 ``` java
-compile 'com.bobomee.android:scrollloopviewpager:1.0.0@aar'
+compile 'com.bobomee.android:scrollloopviewpager:1.1@aar'
 ```
 
 Layout 
