@@ -7,10 +7,6 @@ File localPropertiesFile = project.file("local.properties");
 if(localPropertiesFile.exists()){
     properties.load(localPropertiesFile.newDataInputStream())
 }
-File projectPropertiesFile = project.rootProject.file('local.properties');
-if(projectPropertiesFile.exists()){
-    properties.load(projectPropertiesFile.newDataInputStream())
-}
 
 // read properties
 def projectName = properties.getProperty("project.name")
@@ -23,12 +19,12 @@ def projectGitUrl = properties.getProperty("project.gitUrl")
 def projectDesc = properties.getProperty("project.desc")
 def projectIssueUrl = properties.getProperty("project.issueUrl")
 
-def developerId = properties.getProperty("developer.id")
-def developerName = properties.getProperty("developer.name")
-def developerEmail = properties.getProperty("developer.email")
+def developerId = DEVELOPER_ID
+def developerName = DEVELOPER_NAME
+def developerEmail = DEVELOPER_EMAIL
 
-def bintrayUser = properties.getProperty("bintray.user")
-def bintrayApikey = properties.getProperty("bintray.apikey")
+def bintrayUser = BINTRAY_USER
+def bintrayApikey = BINTRAY_APIKEY
 
 def javadocName = properties.getProperty("javadoc.name")
 
