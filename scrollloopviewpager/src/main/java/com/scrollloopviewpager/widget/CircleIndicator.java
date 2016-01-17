@@ -1,6 +1,7 @@
 package com.scrollloopviewpager.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -8,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.autoscrollloopviewpager.scrollloopviewpager.R;
 
 /***
  * indicator for scroll
@@ -21,25 +24,30 @@ public class CircleIndicator extends View implements ViewPager.OnPageChangeListe
     private int viewWidth;
     private int actualWidth;
     private int selectedPos;
+
     private Paint selectedPaint;
     private Paint unselectedPaint;
-    private int dotMargin;
 
-    private int radius;
-    private int paddingTop;
-    private int paddingBottom;
-    private int unselected_color;
-    private int selected_color;
+    private int radius = 3;
+    private int dotMargin = 5;
+    private int paddingTop = 15;
+    private int paddingBottom = 15;
+    private int unselected_color = Color.CYAN;
+    private int selected_color = Color.RED;
 
     public CircleIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
+        handlerAttrs(context, attrs);
+    }
 
-        radius = dip2px(getContext(), 3);
-        dotMargin = dip2px(getContext(), 5);
-        paddingTop = dip2px(getContext(), 15);
-        paddingBottom = dip2px(getContext(), 15);
-        selected_color = Color.parseColor("#39ccd3");
-        unselected_color = Color.parseColor("#e8f9fb");
+    private void handlerAttrs(Context context, AttributeSet attrs) {
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CircleIndicator);
+        radius = ta.getDimensionPixelOffset(R.styleable.CircleIndicator_radius, dip2px(context,radius));
+        dotMargin = ta.getDimensionPixelOffset(R.styleable.CircleIndicator_dotMargin, dip2px(context,dotMargin));
+        paddingTop = ta.getDimensionPixelOffset(R.styleable.CircleIndicator_paddingTop, dip2px(context,paddingTop));
+        paddingBottom = ta.getDimensionPixelOffset(R.styleable.CircleIndicator_paddingBottom, dip2px(context,paddingBottom));
+        selected_color = ta.getColor(R.styleable.CircleIndicator_selected_color, selected_color);
+        unselected_color = ta.getColor(R.styleable.CircleIndicator_unselected_color, unselected_color);
     }
 
     public int getDotMargin() {

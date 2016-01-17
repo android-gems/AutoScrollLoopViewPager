@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleIndicator">
+
+        <attr name="radius" format="dimension|reference"/>
+        <attr name="dotMargin" format="dimension|reference"/>
+        <attr name="paddingTop" format="dimension|reference"/>
+        <attr name="paddingBottom" format="dimension|reference"/>
+        <attr name="selected_color" format="color|reference"/>
+        <attr name="unselected_color" format="color|reference"/>
+
+    </declare-styleable>
+</resources>
