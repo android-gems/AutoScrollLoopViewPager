@@ -36,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
         l.add(R.mipmap.a);
         l.add(R.mipmap.b);
         l.add(R.mipmap.c);
+        l.add(R.mipmap.c);
         l.add(R.mipmap.a);
         l.add(R.mipmap.b);
+        l.add(R.mipmap.c);
         l.add(R.mipmap.c);
         myBanner.setData(l);
         myBanner.setDurtion(5.0f);
