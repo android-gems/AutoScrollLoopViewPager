@@ -105,7 +105,7 @@ MyBanner myBanner = (MyBanner) findViewById(R.id.slideshowView);
 ```
 
 See:
-[BannerViewActivity.java](https://github.com/BoBoMEe/BlogDemos/blob/master/app/src/main/java/com/bobomee/blogdemos/ui/activity/BannerViewActivity.java)
+[BannerViewActivity.java](https://github.com/BoBoMEe/AutoScrollLoopViewPager/blob/master/sample/src/main/java/com/bobomee/android/sample/MainActivity.java)
 
 
 ## License
