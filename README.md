@@ -1,3 +1,5 @@
+[![Android Gems](http://www.android-gems.com/badge/BoBoMEe/AutoScrollLoopViewPager.svg?branch=master)](http://www.android-gems.com/lib/BoBoMEe/AutoScrollLoopViewPager)
+
 # AutoScrollLoopViewPager
 
 Android auto scroll viewpager or viewpager in viewpager
